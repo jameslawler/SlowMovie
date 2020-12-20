@@ -4,7 +4,7 @@
 import os, time
 from PIL import Image
 
-import argz
+import argconfig
 import state
 
 # Ensure this is the correct import for your particular screen 
@@ -14,7 +14,7 @@ from waveshare_epd import epd7in5_V2 as epd_driver
 imagesDirectory = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'Images/')
 
 # Get argument inputs and set constants
-args = argz.getArgs()
+args = argconfig.getArgs()
 
 frameDelay = float(args.delay)
 
@@ -49,6 +49,12 @@ while 1:
 
   # Store current position in case program restarts
   state.saveCurrentPosition(currentPosition)
+
+  # Log a mesage to know current state
+  print("Displaying image " + str(currentPosition).zfill(4))
+
+  # Increment current position
+  currentPosition = currentPosition + 1
 
   # Wait for delay until next frame is shown
   epd.sleep()
