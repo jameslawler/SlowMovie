@@ -16,10 +16,10 @@ imagesDirectory = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'Ima
 # Get argument inputs and set constants
 args = argconfig.getArgs()
 
-frameDelay = float(args.delay)
+frameDelay = int(args.delay)
 
 if args.start:
-  currentPosition = float(args.start)
+  currentPosition = int(args.start)
 else:
   currentPosition = state.getCurrentPosition()
 
@@ -36,7 +36,7 @@ while 1:
     print("Image not found (" + imageFilePath + "). Exiting Program")
     epd.Clear()
     epd.sleep()
-    epd7in5.epdconfig.module_exit()
+    epd7in5_V2.epdconfig.module_exit()
     exit()
 
   pil_im = Image.open(imageFilePath)
@@ -63,6 +63,6 @@ while 1:
 
 epd.Clear()
 epd.sleep()
-epd7in5.epdconfig.module_exit()
+epd7in5_V2.epdconfig.module_exit()
 
 exit()

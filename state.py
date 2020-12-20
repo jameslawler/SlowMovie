@@ -10,7 +10,7 @@ def getCurrentPosition():
   currentPositionFile = open(currentPositionPath)
 
   for line in currentPositionFile:
-    return float(line)
+    return int(line)
 
   return 1
 
