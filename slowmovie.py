@@ -36,7 +36,7 @@ while 1:
     print("Image not found (" + imageFilePath + "). Exiting Program")
     epd.Clear()
     epd.sleep()
-    epd7in5_V2.epdconfig.module_exit()
+    epd_driver.epdconfig.module_exit()
     exit()
 
   pil_im = Image.open(imageFilePath)
@@ -63,6 +63,6 @@ while 1:
 
 epd.Clear()
 epd.sleep()
-epd7in5_V2.epdconfig.module_exit()
+epd_driver.epdconfig.module_exit()
 
 exit()
