@@ -4,7 +4,7 @@
 import os, time
 from PIL import Image
 
-import arguments.getArgs
+import argz
 import state
 
 # Ensure this is the correct import for your particular screen 
@@ -14,7 +14,7 @@ from waveshare_epd import epd7in5_V2 as epd_driver
 imagesDirectory = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'Images/')
 
 # Get argument inputs and set constants
-args = arguments.getArgs()
+args = argz.getArgs()
 
 frameDelay = float(args.delay)
 

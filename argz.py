@@ -8,4 +8,3 @@ def getArgs():
     help="Start at a specific frame (default is read from file)")
 
   return parser.parse_args()
-
