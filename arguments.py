@@ -1,3 +1,5 @@
+import argparse
+
 def getArgs():
   parser = argparse.ArgumentParser(description='SlowMovie Settings')
   parser.add_argument('-d', '--delay', default=120,
